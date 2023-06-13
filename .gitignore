@@ -1,0 +1,5 @@
+.terraform
+.terraform.lock.hcl
+.terraform.tfstate.locl.info
+terraform.tfstate
+terraform.tfstate.backup
