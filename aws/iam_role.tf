@@ -280,6 +280,13 @@ resource "aws_iam_role_policy_attachment" "codebuild_mgmt_role_attach_codebuild_
   policy_arn = aws_iam_policy.codebuild_policy.arn
 }
 
+resource "aws_iam_role_policy_attachment" "codebuild_mgmt_role_attach_CloudWatchLogsFullAccess" {
+  role       = aws_iam_role.codebuild_mgmt_role.name
+  policy_arn = data.aws_iam_policy.CloudWatchLogsFullAccess.arn
+}
+
+
+
 #################### CODE BUILD ####################
 
 
