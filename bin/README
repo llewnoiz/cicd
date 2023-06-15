@@ -1,0 +1,6 @@
+mfa 계정의 access, secret 을 default 설정 필요
+
+aws configure 
+
+access 입력
+secret 입력

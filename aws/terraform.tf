@@ -9,6 +9,6 @@ terraform {
 
 provider "aws" {
   # Configuration options
-  profile = "csl"
+  profile = "mfa"
   region = "ap-northeast-2"
 }
