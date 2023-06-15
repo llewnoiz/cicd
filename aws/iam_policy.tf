@@ -322,30 +322,3 @@ resource "aws_iam_policy" "codepipeline_mgmt_policy" {
   })
 }
 
-# code pipeline
-
-# cloud front oai
-
-data "aws_iam_policy_document" "service_launcher_bucket" {
-  statement {
-    actions   = ["s3:GetObject"]
-    resources = ["${aws_s3_bucket.service_launcher_bucket.arn}/*"]
-
-    principals {
-      type        = "AWS"
-      identifiers = [aws_cloudfront_origin_access_identity.service_launcher_bucket.iam_arn]
-    }
-  }
-
-  statement {
-    actions   = ["s3:ListBucket"]
-    resources = [aws_s3_bucket.service_launcher_bucket.arn]
-
-    principals {
-      type        = "AWS"
-      identifiers = [aws_cloudfront_origin_access_identity.service_launcher_bucket.iam_arn]
-    }
-  }
-}
-
-# cloud front

@@ -1,25 +1,15 @@
 #APP-SL
-# resource "aws_codecommit_repository" "app_sl" {
-#   repository_name = "bespin-app-sl"
-#   description     = "frontend sl"
-# }
+resource "aws_codecommit_repository" "app_sl" {
+  repository_name = "bespin-app-sl"
+  description     = "frontend sl"
+}
 #APP-ADMIN
-# resource "aws_codecommit_repository" "app_admin" {
-#   repository_name = "bespin-app-admin"
-#   description     = "frontend admin"
-# }
+resource "aws_codecommit_repository" "nginx" {
+  repository_name = "bespin-nginx"
+  description     = "nginx"
+}
 #SVC-SL
-# resource "aws_codecommit_repository" "service_sl" {
-#   repository_name = "bespin-svc-sl"
-#   description     = "backend sl"
-# }
-#SVC-ADMIN
-# resource "aws_codecommit_repository" "service_admin" {
-#   repository_name = "bespin-svc-admin"
-#   description     = "backend admin"
-# }
-#SVC-WORKER
-# resource "aws_codecommit_repository" "service_worker" {
-#   repository_name = "bespin-launcher-worker"
-#   description     = "backend worker"
-# }
+resource "aws_codecommit_repository" "nodejs" {
+  repository_name = "bespin-nodejs"
+  description     = "nodejs"
+}
